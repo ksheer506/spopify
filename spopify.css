@@ -1,0 +1,469 @@
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+/* @ 메뉴: 클릭 이펙트 */
+a:visited,
+a:link {
+  color: white;
+  text-decoration-line: none;
+}
+
+a:hover,
+a:active {
+  color: #1ed760;
+}
+/* ---------------------------------------------------------- */
+/* 내비게이션 바 */
+header {
+  display: flex;
+  justify-content: flex-start;
+  background-color: black;
+  color: white;
+  height: clamp(55px, 6.8vw, 70px);
+  /* 10vh */
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+header>.logo {
+  display: flex;
+  min-width: 150px;
+  margin-right: auto;
+  text-align: center;
+}
+
+header>.logo>a {
+  margin: auto;
+  width: 150px;
+  height: 70%;
+  background: url("img/spotify_banner.png") center/100% no-repeat;
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+/* ---------------------------------------------------------- */
+/* 내비게이션 내부 메뉴 */
+.navigation {
+  display: inline-flex;
+  column-gap: 3vw;
+  margin-right: 30px;
+}
+
+.navigation>div {
+  margin: auto;
+  width: fit-content;
+}
+
+.navigation>span {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background-color: white;
+}
+
+.navigation a {
+  margin: auto;
+  text-decoration-line: none;
+  font-weight: bold;
+}
+
+.navigation>div:nth-of-type(4) {
+  font-weight: normal;
+}
+/* ---------------------------------------------------------- */
+/* 본문: 프로모션 */
+section>div.promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 205, 210, 255);
+  text-align: center;
+  height: auto;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  font-size: 1.4rem;
+}
+
+section .promo-title {
+  width: 65%;
+  font-size: 3.3rem;
+  font-weight: bold;
+}
+
+section .promo-text {
+  width: 80%;
+  margin-top: 50px;
+}
+
+section p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* ---------------------------------------------------------- */
+/* 본문: 앱 다운로드 */
+section .download {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 50px;
+  column-gap: 15px;
+  row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+/* 본문: 앱 다운로드 버튼 */
+.download #google {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0);
+  background: url("img/googleplay.png") center/100% no-repeat;
+  border-radius: 7%;
+  width: 100%;
+  height: 40px;
+}
+
+.download #apple {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0);
+  background: url("img/appstore.png") center/100% no-repeat;
+  border-radius: 7%;
+  width: 100%;
+  height: 40px;
+}
+
+.download>div {
+  width: 150px;
+}
+
+/* ---------------------------------------------------------- */
+/* 본문: 약관 */
+section #terms {
+  font-size: 0.75rem;
+  width: 50%;
+  margin-top: 50px;
+}
+
+section #terms>a:visited {
+  text-decoration: underline;
+  color: rgba(109, 4, 206, 0.682);
+}
+/* ---------------------------------------------------------- */
+/* 하단 메뉴 */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 40px;
+  padding-top: 30px;
+  background-color: black;
+  color: white;
+  padding-left: 5%;
+}
+
+.menu #logo {
+  display: flex;
+  text-align: center;
+}
+
+.menu #logo>a {
+  display: inline-block;
+  height: 60px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.menu ul.details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  flex: 0 1 140px;
+  margin-top: 35px;
+  padding-left: 20px;
+  color: rgb(152, 152, 152);
+  font-size: 0.85rem;
+}
+
+.details>li {
+  list-style: none;
+  color: white;
+  font-size: 1rem;
+}
+/* ---------------------------------------------------------- */
+/* footer */
+footer {
+  background-color: black;
+  color: rgb(183, 183, 183);
+  font-size: 0.8rem;
+}
+
+/* 언어선택 박스 */
+footer .language {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+
+footer select {
+  height: 30px;
+  width: 100px;
+}
+
+/* 법률정보, ... */
+footer .extra {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 40px;
+  margin-left: 5%;
+  padding-bottom: 30px;
+  font-size: 0.7rem;
+}
+
+footer .extra>div {
+  min-width: auto;
+}
+
+footer .extra>div:last-child {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+/* @ footer: 클릭 이펙트 */
+footer a:visited,
+footer a:link {
+  color: rgb(183, 183, 183);
+  text-decoration-line: none;
+}
+
+footer a:hover,
+footer a:active {
+  color: #1ed760;
+}
+
+/* 데스크톱 */
+@media (min-width: 850px) {
+/* 햄버거 메뉴 숨기기 */
+header .hamburger {
+  display: none;
+}
+
+/* 하단 메뉴 */
+.menu #logo {
+  background: url("img/spotify_banner.png") 50% 0%/150px no-repeat;
+  width: 150px;
+}
+
+
+.menu #logo>a {
+  width: 150px;
+}
+}
+
+/* 중간 사이즈 */
+@media (max-width: 849px) {
+/* 네비게이션 바 */
+header>.logo>a {
+  width: 120px;
+}
+/* ---------------------------------------------------------- */
+/* 확장형 메뉴 숨기기(햄버거 메뉴로 대체) */
+.navigation {
+  display: none;
+}
+
+/* 햄버거 메뉴 보이기 */
+.hamburger {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.show-menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  width: 30px;
+  height: 37px;
+  
+}
+
+.hamburger input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  z-index: 4;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* 햄버거 가운데 */
+.show-menu>span {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.5s all;
+}
+/* 햄버거 맨 위 */
+.show-menu::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  transition: 0.5s all;
+  z-index: 2;
+}
+/* 햄버거 맨 아래 */
+.show-menu::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  transition: 0.5s all;
+  z-index: 2;
+}
+/* ---------------------------------------------------------- */
+/* 햄버거 버튼 사이드 메뉴 */
+div.side-menu {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  right: min(-85vw, -400px);
+  width: min(85vw, 400px);
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: black;
+  padding: 50px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  z-index: 1;
+  transition: 0.5s all;
+}
+
+/* 사이드 메뉴를 열었을 때 반투명 배경 */
+div.background {
+  pointer-events: none;  
+  /* 햄버거 버튼 클릭하지 않은 상태일 때도 떠 있지만 클릭 상호작용 없애서 없는 것처럼 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  transition: 0.5s all;
+}
+/* ---------------------------------------------------------- */
+/* 햄버거 메뉴 클릭 에니메이션 */
+.hamburger>input:checked~.show-menu::before {
+  transform-origin: 0 50%;
+  transform: rotate(45deg);
+  transition: 0.5s all;
+  z-index: 3;
+}
+
+.hamburger>input:checked~.show-menu::after {
+  /* position: relative; */
+  transform-origin: 0 50%;
+  transform: translateX(-0.2px) rotate(-45deg);
+  transition: 0.5s all;
+  z-index: 3;
+}
+
+.hamburger>input:checked~.show-menu>span {
+  background-color: black;
+  transition: 0.5s all;
+}
+/* ---------------------------------------------------------- */
+/* 사이드 메뉴 열렸을 때 스크롤 방지 */
+body.sideMenu-opened {
+  overflow: hidden;
+}
+
+/* 햄버거 메뉴 클릭했을 때 1. 반투명 배경 */
+.hamburger>input:checked~.show-menu>.background {
+  display: flex;
+  opacity: 0.7;
+  transition: 0.5s all;
+}
+
+/* 햄버거 메뉴 클릭했을 때 2. 사이드 메뉴 */
+.hamburger>input:checked~.show-menu>.side-menu {
+  right: 0vw;
+  transition: 0.5s all;
+  z-index: 1;
+}
+
+/* 사이드 메뉴 내부(링크) */
+.side-menu>div {
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.side-menu>span {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  width: 18px;
+  height: 2px;
+  background-color: white;
+}
+
+.side-menu>div:nth-of-type(n+4) * {
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: rgb(180, 180, 180);
+}
+/* ------------------------------------------------------ */
+/* 하단 메뉴 */
+.menu #logo {
+  background: url("img/spotify_banner.png") 0% 50%/120px no-repeat;
+  flex: 1 0 100%;
+}
+
+.menu #logo>a {
+  width: 120px;
+}
+
+.details>li {
+  list-style: none;
+  color: white;
+  font-size: 1rem;
+}
+}
+
+/* 작은 사이즈 */
+@media (max-width: 599px) {
+  /* 햄버거 버튼 사이드 메뉴 */
+  div.side-menu {
+    font-size: 1.5rem;
+  }
+
+/* 사이드 메뉴 내부(링크) */
+.side-menu>div:nth-of-type(n+4) * {
+  font-size: 1rem;
+}
+
+/* 하단 메뉴 */
+.menu {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 10px;
+}
+
+.menu #logo>a {
+  width: 120px;
+}
+}
